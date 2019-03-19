@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Js Jump</title>
+</head>
+
+<body>
+  <form name=form action="http://www.baidu.com/s?" method="get" onsubmit="return checkInput(this);">
+    <ul>
+      <li>
+        <p>Input Word:</p> <input type="text" name="wd"></li>
+      <li>
+        <p>Input Number:</p> <input type="text" name="pn"></li>
+      <li><input type="submit" value="Submit"></li>
+    </ul>
+  </form>
+  <script>
+    function checkInput() {
+      var wd = document.forms["form"]["wd"].value;
+      var pn = document.forms["form"]["pn"].value;
+      if (wd == "" || isNaN(pn)) {
+        alert("Input Again...");
+        return false;
+      } else {
+        return true;
+      }
+    }
+  </script>
+</body>
+
+</html>
